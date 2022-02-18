@@ -1,6 +1,5 @@
 import lockImg from "../../assets/lock.svg";
 import unLockImg from "../../assets/unlock.svg";
-import avatarUser from "../../assets/avatarUser.svg";
 
 import {DivUser, DivRoomInfo, ListRoom, DivRoomPrivate, ButtonContent, FormPassword} from "./roomInList.styles";
 
@@ -59,7 +58,7 @@ export function RoomInList({room}: RoomProps) {
       <Toaster/>
       <ButtonContent disabled={roomPassword} onClick={enterInRoom}>
         <DivUser>
-          <img src={room.avatarUser ? room.avatarUser : avatarUser } alt={`user ${room.nameUser}`} />
+          <img src={room.avatarUser && room.avatarUser  } alt={`user ${room.nameUser}`} />
           <div>
             <p>{room.nameRoom}</p>
             <span>{room.nameUser}</span>
